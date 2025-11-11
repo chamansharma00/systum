@@ -25,4 +25,17 @@ class demo {
         int c = add(a,b);
         System.out.println("Addition"+c);
     }
+
+    //javac -h . demo.java
+    // gcc -shared -o demo.dll -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" demo.c
+    // java -classpath . -Djava.library.path=. demo
+
+
+    // gcc -fPIC -I"$JAVA_HOME/include" -I"$JAVA_HOME/include/linux" -shared -o libdemo.so demo.c
+    // java -classpath . -Djava.library.path=. demo
+
+    //export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && javac -h . demo.java && gcc -fPIC -I"$JAVA_HOME/include" -I"$JAVA_HOME/include/linux" -shared -o libdemo.so demo.c && LD_LIBRARY_PATH=$PWD java -classpath . -Djava.library.path=. demo
+
+
+
 }
