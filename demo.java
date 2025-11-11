@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class demo {
+    static {
+        System.loadLibrary("demo");
+    }
+
+    private native int add(int a, int b);
+
+    private native int sub(int a, int b);
+
+    private native int mul(int a, int b);
+
+    private native int div(int a, int b);
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a, b, ch;
+
+        System.out.println("\nEnter value of a : ");
+        a = sc.nextInt();
+        System.out.println("\nEnter value of b : ");
+        b = sc.nextInt();
+        
+        int c = add(a,b);
+        System.out.println("Addition"+c);
+    }
+}
